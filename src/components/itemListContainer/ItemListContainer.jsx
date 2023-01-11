@@ -4,7 +4,7 @@ import ItemList from "../itemList/ItemList";
 import { useParams } from "react-router-dom";
 const ItemListContainer = () => {
   const { id } = useParams();
-  console.log(id);
+
   const [items, setItems] = useState([]);
   useEffect(() => {
     const productosFiltered = products.filter(

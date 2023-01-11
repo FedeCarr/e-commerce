@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Counter = ({ stock, initial }) => {
+const Counter = ({ stock, initial, onAdd }) => {
   const [counter, setCounter] = useState(initial);
 
   const increment = () => {
@@ -13,10 +13,6 @@ const Counter = ({ stock, initial }) => {
     if (counter > initial) {
       setCounter(counter - 1);
     }
-  };
-
-  const onAdd = (quantity) => {
-    console.log("la cantidad es: ", quantity);
   };
 
   return (
