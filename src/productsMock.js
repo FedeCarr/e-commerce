@@ -3,7 +3,7 @@ export const products = [
     id: 1,
     name: "Garlic",
     price: 1.69,
-    stock: 5,
+    stock: 7,
     category: "vegetables",
     description: "Spain. 100g. Organic",
     img: "https://res.cloudinary.com/do9shwcmh/image/upload/v1670689749/garlic-thinkstockphotos-514990456-square_ypvvay.jpg",
