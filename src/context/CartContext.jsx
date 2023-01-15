@@ -36,12 +36,17 @@ const CartContextProvider = ({ children }) => {
     }, 0);
     return total;
   };
+  const deleteProductById = (id) => {
+    const newArray = cart.filter((prod) => prod.id !== id);
+    setCart(newArray);
+  };
   const data = {
     cart,
     addToCart,
     clearCart,
     getQuantityById,
     getTotalPrice,
+    deleteProductById,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 const Cart = () => {
+  const { deleteProductById } = useContext(CartContext);
   const { cart, clearCart, getTotalPrice } = useContext(CartContext);
   if (cart.length < 1) {
     return <h2>No hay elementos</h2>;
@@ -20,6 +21,13 @@ const Cart = () => {
           <h2>{item.name}</h2>
           <h2>{item.price}</h2>
           <h2>{item.quantity} unidades</h2>
+          <button
+            onClick={() => {
+              deleteProductById(item.id);
+            }}
+          >
+            Borrar item
+          </button>
         </div>
       ))}
       <div>
