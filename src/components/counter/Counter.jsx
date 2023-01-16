@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-const Counter = ({ stock, initial = 1, onAdd }) => {
+const Counter = ({ stock, initial = 0, onAdd }) => {
   const [counter, setCounter] = useState(initial);
   useEffect(() => {
     setCounter(initial);
