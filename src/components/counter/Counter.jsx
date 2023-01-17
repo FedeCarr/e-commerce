@@ -13,7 +13,7 @@ const Counter = ({ stock, initial = 0, onAdd }) => {
   };
 
   const decrement = () => {
-    if (counter > 1) {
+    if (counter > 0) {
       setCounter(counter - 1);
     }
   };
@@ -24,7 +24,11 @@ const Counter = ({ stock, initial = 0, onAdd }) => {
 
       <button onClick={increment}>+</button>
       <button onClick={decrement}>-</button>
-      <button onClick={() => onAdd(counter)}>agregar al carrito</button>
+      {counter === 0 ? (
+        <h2>Carrito vacio</h2>
+      ) : (
+        <button onClick={() => onAdd(counter)}>agregar al carrito</button>
+      )}
     </div>
   );
 };
