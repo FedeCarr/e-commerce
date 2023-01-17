@@ -7,7 +7,6 @@ const Form = () => {
     event.preventDefault();
   };
 
-  console.log(userData.name, userData.lastName);
   return (
     <div>
       <form action="" onSubmit={handleSubmit}>

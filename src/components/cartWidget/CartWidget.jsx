@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 const CartWidget = () => {
-  const { cart } = useContext(CartContext);
+  const { getTotalProd } = useContext(CartContext);
   return (
     <Link to="/cart">
       <div className="container-cart">
@@ -14,7 +14,7 @@ const CartWidget = () => {
           style={{ fontSize: "2rem", color: "black" }}
         />
         <div className="bubble-counter">
-          <span>{cart.length}</span>
+          <span>{getTotalProd()}</span>
         </div>
       </div>
     </Link>

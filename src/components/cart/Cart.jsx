@@ -36,9 +36,9 @@ const Cart = () => {
   if (orderId) {
     return (
       <div>
+        <Orders order={order} />
         <h1>Tu orden de compra es: {orderId}</h1>
         <Link to={"/"}>Volver a comprar</Link>
-        <Orders order={order} />
       </div>
     );
   }
@@ -46,7 +46,7 @@ const Cart = () => {
     <div>
       <div>
         <h2>Info del carrito</h2>
-        <h3>Precio total: {getTotalPrice()}</h3>
+
         <h3>
           Precio total: {getTotalPrice() > 0 ? getTotalPrice() : "No hay items"}
         </h3>

@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { getDoc, doc, collection } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
+import ItemDetail from "../itemDetail/ItemDetail";
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
 
@@ -28,9 +29,7 @@ const ItemDetailContainer = () => {
   const quantity = getQuantityById(product.id);
   return (
     <div>
-      <h2>{product.name}</h2>
-      <h2>{product.price}</h2>
-      <h2>{product.description}</h2>
+      <ItemDetail product={product} />
       <Counter onAdd={onAdd} stock={product.stock} initial={quantity} />
     </div>
   );

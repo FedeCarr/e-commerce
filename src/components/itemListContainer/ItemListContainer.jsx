@@ -11,26 +11,12 @@ const override = {
 };
 const ItemListContainer = () => {
   const { categoryName } = useParams();
-  console.log(categoryName);
+
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    // const productosFiltered = products.filter(
-    //   (productos) => productos.category === id
-    // );
-    // const task = new Promise((resolve, reject) => {
-    //   setTimeout(() => {
-    //     resolve(id ? productosFiltered : products);
-    //   }, 500);
-    // });
-    // task
-    //   .then((res) => {
-    //     setItems(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log("ERROR");
-    //   });
+
     const itemCollection = collection(db, "products");
     if (categoryName) {
       const q = query(itemCollection, where("category", "==", categoryName));

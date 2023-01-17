@@ -30,7 +30,6 @@ const Formix = ({ cart, getTotalPrice, setOrderId, clearCart }) => {
     clearCart();
   };
 
-  console.log(userData.name, userData.phone, userData.email);
   return (
     <div>
       <form action="" onSubmit={handleSubmit}>
